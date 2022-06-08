@@ -1,5 +1,5 @@
 <div class="myheader d-flex justify-content-between">
-<h1 class="ml-3 mt-2">Simple Airbnb</h1>
+<h3 class="ml-3 mt-2">Simple Airbnb</h3>
 <a href="flats/new" class="btn btn-outline-primary m-3">Add flat</a>
 </div>
 
@@ -20,6 +20,8 @@
         </div>
         <div class="mycard-bottom">
           <%= link_to "More info", flat_path(flat) %>
+          <%= link_to "Edit", edit_flat_path(flat), class: "text-warning pl-1" %>
+          <%= link_to "Delete", flat_path(flat), method: :delete, class: "text-danger pl-1" %>
         </div>
       </div>
     <% end %>
