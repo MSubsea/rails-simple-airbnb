@@ -6,5 +6,5 @@
   <p><strong>Number of guests:</strong> <%= @flat.number_of_guests %></p>
   <%= link_to "Back to overview", flats_path %>
   <%= link_to "Edit flat", edit_flat_path(@flat), class: "text-warning pl-3" %>
-  <%= link_to "Delete", flat_path(@flat), method: :delete, class: "text-danger pl-3" %>
+  <%= link_to "Remove", flat_path(@flat), method: :delete, class: "text-danger pl-3" %>
 </div>
