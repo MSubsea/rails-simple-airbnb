@@ -1,0 +1,27 @@
+<div class="myheader d-flex justify-content-between">
+<h1 class="ml-3 mt-2">Simple Airbnb</h1>
+<a href="flats/new" class="btn btn-outline-primary m-3">Add flat</a>
+</div>
+
+<div class="container">
+  <h1>All our Flats (<%= @flats.count %>)</h1>
+  <div class="row row-cols-4">
+    <% @flats.each do |flat| %>
+      <div class="mycard col">
+        <div class="mycard-top">
+          <h2><%= flat.name %></h2>
+          <p><%= flat.address %></p>
+          <p>
+          <i class="tiny material-icons">people</i>
+          <%= flat.number_of_guests %>
+          <i class="fa fa-euro-sign"></i>
+          <%= flat.price_per_night %>
+          </p>
+        </div>
+        <div class="mycard-bottom">
+          <%= link_to "More info", flat_path(flat) %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

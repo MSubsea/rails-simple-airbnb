@@ -1,3 +1,44 @@
 // Place all the styles related to the flats controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.myheader {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+h1{
+  margin-left: 20px;
+}
+
+.mycard {
+  min-width: 200px;
+  height: 130px;
+  margin: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px rgba(0,0,0, 0.1);
+}
+
+.mycard-top {
+ background-color: rgb(248, 249, 250);
+ margin: 0;
+}
+
+.mycard-bottom {
+  background-color: white;
+}
+
+.card h2 {
+  margin: 20px;
+  font-size: 16px;
+}
+
+.card p {
+  margin: 20px;
+  font-size: 12px;
+}
+
+.card a {
+  margin-left: 20px;
+  padding-bottom: 20px;
+  font-size: 12px;
+}
