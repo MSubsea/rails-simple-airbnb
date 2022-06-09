@@ -14,6 +14,7 @@ h1{
   min-width: 200px;
   height: 130px;
   margin: 20px;
+  padding: 0;
   border: 1px solid rgba(0, 0, 0, 0.3);
   box-shadow: 4px 4px rgba(0,0,0, 0.1);
 }
@@ -21,24 +22,26 @@ h1{
 .mycard-top {
  background-color: rgb(248, 249, 250);
  margin: 0;
+ padding: 0;
 }
 
 .mycard-bottom {
   background-color: white;
+  margin-left: 10px;
 }
 
-.card h2 {
-  margin: 20px;
+.mycard h2 {
+  padding-left: 20px;
+  padding-top: 10px;
   font-size: 16px;
 }
 
-.card p {
-  margin: 20px;
+.mycard p {
   font-size: 12px;
+  padding-left: 20px;
 }
 
-.card a {
-  margin-left: 20px;
-  padding-bottom: 20px;
+.mycard a {
+  margin-left: 10px;
   font-size: 12px;
 }
