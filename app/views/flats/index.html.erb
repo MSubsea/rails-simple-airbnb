@@ -1,8 +1,12 @@
 <div class="container">
   <h1>All our Flats (<%= @flats.count %>)</h1>
+
   <div class="row row-cols-4">
     <% @flats.each do |flat| %>
       <div class="mycard col">
+        <div class="mycard-top">
+          <%= image_tag (flat.picture), class: "img-responsive"%>
+        </div>
         <div class="mycard-top">
           <h2><%= flat.name %></h2>
           <p><%= flat.address %></p>
