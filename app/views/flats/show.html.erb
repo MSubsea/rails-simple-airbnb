@@ -1,11 +1,47 @@
-<div class="container">
+<div class="show">
   <%= image_tag (@flat.picture), class: "img-responsive"%>
-  <h1><%= @flat.name %></h1>
-  <p><strong>Address:</strong> <%= @flat.address %></p>
-  <p><strong>Description:</strong> <%= @flat.description %></p>
-  <p><strong>Price per night:</strong> <%= @flat.price_per_night %></p>
-  <p><strong>Number of guests:</strong> <%= @flat.number_of_guests %></p>
-  <%= link_to "Back to overview", flats_path %>
-  <%= link_to "Edit flat", edit_flat_path(@flat), class: "text-warning pl-3" %>
-  <%= link_to "Remove", flat_path(@flat), method: :delete, class: "text-danger pl-3" %>
+  <div class="container">
+    <div class="d-flex">
+      <div class="flex-fill mr-4">
+          <div class="show-box">
+            <h1><%= @flat.name %></h1>
+            <h2><%= @flat.address %></h2>
+          </div>
+          <div class="show-box">
+            <h1>A bit more about this flat</h1>
+            <h2><%= @flat.description %></h2>
+          </div>
+      </div>
+      <div>
+          <div class="show-book show-box">
+            <h2>Book this place!</h2>
+            <form>
+              <div>
+                <label for="fromDate">From</label>
+                <input type="date" id="fromDate" class="w-auto">
+              </div>
+              <div>
+                <label for="toDate">To</label>
+                <input type="date" id="toDate" class="w-auto">
+              </div>
+              <div>
+                <button type="submit" class="btn btn-success w-100">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="show-details show-box">
+            <h2>Details</h2>
+            <p>
+            <i class="tiny material-icons">people</i>
+            <%= @flat.number_of_guests %>
+            <i class="fa fa-euro-sign"></i>
+            <%= @flat.price_per_night %>
+            </p>
+          </div>
+      </div>
+    </div>
+    <%= link_to "Back to overview", flats_path %>
+    <%= link_to "Edit flat", edit_flat_path(@flat), class: "text-warning pl-3" %>
+    <%= link_to "Remove", flat_path(@flat), method: :delete, class: "text-danger pl-3" %>
+  </div>
 </div>
